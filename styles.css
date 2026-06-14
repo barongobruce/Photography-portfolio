@@ -75,8 +75,8 @@ body {
 .header {
   min-height: 600px;
   background-image: radial-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9)),
-    url("assets/header.jpg");
-  background-position: center center;
+    url("assets/background1.jpg");
+  background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -101,7 +101,7 @@ nav {
 }
 
 .nav__logo img {
-  max-width: 70px;
+  max-width: 90px;
 }
 
 .nav__menu__btn {
@@ -151,7 +151,7 @@ nav {
 }
 
 .about__container img {
-  max-width: 170px;
+  max-width: 210px;
   margin-inline: auto;
 }
 
@@ -166,6 +166,12 @@ nav {
   isolation: isolate;
 }
 
+/* === Service Card Headings === */
+.portfolio__card {
+  position: relative;
+  isolation: isolate;
+}
+
 .portfolio__card::after {
   position: absolute;
   bottom: 2rem;
@@ -174,6 +180,9 @@ nav {
   font-size: 2rem;
   font-family: var(--header-font);
   color: var(--white);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .portfolio__card:nth-child(1)::after {
@@ -185,7 +194,31 @@ nav {
 }
 
 .portfolio__card:nth-child(3)::after {
-  content: "Fashions";
+  content: "Maternity";
+}
+
+.portfolio__card:nth-child(4)::after {
+  content: "Family";
+}
+
+.portfolio__card:nth-child(5)::after {
+  content: "Events";
+}
+
+.portfolio__card:nth-child(6)::after {
+  content: "Engagements";
+}
+
+.portfolio__card:nth-child(7)::after {
+  content: "Funerals";
+}
+
+.portfolio__card:nth-child(8)::after {
+  content: "Birthdays";
+}
+
+.portfolio__card:nth-child(9)::after {
+  content: "Wall mounts";
 }
 
 .portfolio__content {
@@ -372,7 +405,7 @@ nav {
   align-items: center;
   gap: 1rem;
 
-  animation: scroll 45s linear infinite;
+  animation: scroll: 45s linear infinite;
 }
 
 .instagram__flex img {
@@ -478,10 +511,6 @@ nav {
   .footer__col:nth-child(1) {
     grid-area: 1/1/2/3;
   }
-
-  .footer__col:nth-child(3) {
-    border-left: 2px solid var(--text-dark);
-  }
 }
 
 @media (width > 768px) {
@@ -517,7 +546,7 @@ nav {
   }
 
   .nav__links .nav__logo img {
-    max-width: 150px;
+    max-width: 200px;
   }
 
   .portfolio__grid {
@@ -546,8 +575,6 @@ nav {
 
   .footer__col:nth-child(1) {
     grid-area: 1/2/2/3;
-    border-left: 2px solid var(--text-dark);
-    border-right: 2px solid var(--text-dark);
   }
 
   .footer__col:nth-child(3) {
