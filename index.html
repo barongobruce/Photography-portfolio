@@ -15,37 +15,49 @@
     <title>Topnotch | Photographer & Videographer</title>
   </head>
   <body>
-    <header class="header" id="home">
-      <nav>
-        <div class="nav__header">
-          <div class="nav__logo">
-            <a href="#">
-              <img src="assets/topnotch-logo.png" alt="logo" />
-            </a>
-          </div>
-          <div class="nav__menu__btn" id="menu-btn">
-            <i class="ri-menu-line"></i>
-          </div>
-        </div>
-        <ul class="nav__links" id="nav-links">
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#about">ABOUT US</a></li>
-          <li><a href="#service">SERVICES</a></li>
-          <li class="nav__logo">
-            <a href="#">
-              <img src="assets/topnotch-logo.png" alt="logo" />
-            </a>
-          </li>
-          <li><a href="#client">CLIENT</a></li>
-          <li><a href="#blog">BLOG</a></li>
-          <li><a href="#contact">CONTACT US</a></li>
-        </ul>
-      </nav>
-      <!-- Add this new div for mobile only -->
-  <div class="hero-brand">
-    <h1>TOPNOTCH<br>PHOTOGRAPHY</h1>
+
+<header class="header" id="home">
+  <nav>
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="#">
+          <img src="assets/topnotch-logo.png" alt="logo" />
+        </a>
+      </div>
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#about">ABOUT US</a></li>
+      <li><a href="#service">SERVICES</a></li>
+      <li class="nav__logo">
+        <a href="#">
+          <img src="assets/topnotch-logo.png" alt="logo" />
+        </a>
+      </li>
+      <li><a href="#client">CLIENT</a></li>
+      <li><a href="#blog">BLOG</a></li>
+      <li><a href="#contact">CONTACT US</a></li>
+    </ul>
+  </nav>
+
+  <!-- Desktop Hero Content -->
+  <div class="hero-content desktop-hero">
+    <h1 class="hero-headline">Capturing Timeless Moments</h1>
+    <a href="#contact" class="hero-btn">Book Now</a>
   </div>
-    </header>
+
+  <!-- Mobile Hero Content -->
+  <div class="hero-content mobile-hero">
+    <div class="mobile-hero-text">
+      <h1>TOPNOTCH<br>PHOTOGRAPHY</h1>
+      <h2 class="hero-headline">Capturing Timeless Moments</h2>
+      <a href="#contact" class="hero-btn">Book Now</a>
+    </div>
+  </div>
+</header>
 
     <div class="section__container about__container" id="about">
       <h2 class="section__header">About Us</h2>
@@ -61,7 +73,7 @@
   document time, but help you relive the emotion and atmosphere of your most meaningful 
   experiences for years to come.
 </p>
-      <img src="assets/topnotch-logo.png" alt="Topnotch Photography" />
+
     </div>
 
    <div class="section__container portfolio__container">
@@ -221,20 +233,20 @@
     <!-- LEFT COLUMN -->
     <div style="flex: 1; min-width: 280px; max-width: 380px;">
 
-      <h3 style="color: #2e7d32; margin-bottom: 1rem;">Get In Touch</h3>
+    <h3 style="color: #C9A962; margin-bottom: 1rem;">Get In Touch</h3>
 
       <div style="margin-bottom: 0.8rem;">
-        <strong style="color: #2e7d32;">📍 Location</strong><br>
+        <strong style="color: #2e7d32;">📍 </strong><br>
         <span style="color: #525252;">Toronto, Canada</span>
       </div>
 
       <div style="margin-bottom: 0.8rem;">
-        <strong style="color: #2e7d32;">📞 Phone / WhatsApp</strong><br>
+        <strong style="color: #2e7d32;">📞 </strong><br>
         <span style="color: #525252;">437 552 8899</span>
       </div>
 
       <div style="margin-bottom: 1.2rem;">
-        <strong style="color: #2e7d32;">✉️ Email</strong><br>
+        <strong style="color: #2e7d32;">✉️ </strong><br>
         <span style="color: #525252;">info@topnotchphotography.com</span>
       </div>
 
@@ -253,17 +265,42 @@
 
     </div>
 
-    <!-- RIGHT COLUMN: Form -->
+    <!-- RIGHT COLUMN: Clean Form -->
     <div style="flex: 1; min-width: 300px; max-width: 450px;">
-      <form>
-        <input type="text" placeholder="Full Name" style="width:100%; padding:12px; margin-bottom:12px; border:1px solid #ccc; border-radius:8px;">
-        <input type="email" placeholder="Email Address" style="width:100%; padding:12px; margin-bottom:12px; border:1px solid #ccc; border-radius:8px;">
-        <input type="tel" placeholder="Phone Number" style="width:100%; padding:12px; margin-bottom:12px; border:1px solid #ccc; border-radius:8px;">
-        <textarea placeholder="Your Message" rows="5" style="width:100%; padding:12px; margin-bottom:16px; border:1px solid #ccc; border-radius:8px;"></textarea>
-        
-        <button type="submit" style="width:100%; background:#2e7d32; color:white; padding:14px; border:none; border-radius:8px; font-size:16px;">
-          Send
-        </button>
+      <form id="contactForm">
+        <div style="margin-bottom: 12px;">
+          <input type="text" id="fullName" placeholder="Full Name" required 
+                 style="width:100%; padding:12px; border:1px solid #ccc; border-radius:8px;">
+          <small id="nameError" style="color: red; display: none; margin-top: 4px;">Please enter your name</small>
+        </div>
+
+        <div style="margin-bottom: 12px;">
+          <input type="email" id="email" placeholder="Email Address" required 
+                 style="width:100%; padding:12px; border:1px solid #ccc; border-radius:8px;">
+          <small id="emailError" style="color: red; display: none; margin-top: 4px;">Please enter a valid email</small>
+        </div>
+
+        <div style="margin-bottom: 12px;">
+          <input type="tel" id="phone" placeholder="Phone Number" required 
+                 style="width:100%; padding:12px; border:1px solid #ccc; border-radius:8px;">
+          <small id="phoneError" style="color: red; display: none; margin-top: 4px;">Please enter your phone number</small>
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <textarea id="message" placeholder="Your Message" rows="5" required 
+                    style="width:100%; padding:12px; border:1px solid #ccc; border-radius:8px; resize: vertical;"></textarea>
+          <small id="messageError" style="color: red; display: none; margin-top: 4px;">Please enter your message</small>
+        </div>
+
+        <button type="submit" 
+        style="width:100%; background:#C9A962; color:white; padding:14px; border:none; border-radius:8px; font-size:16px; font-weight: 600; cursor: pointer;">
+  Book Now
+</button>
+
+        <!-- Success Message -->
+        <p id="successMessage" style="color: green; margin-top: 12px; display: none; text-align: center; font-weight: 500;">
+          Thank you! Your message has been sent successfully.
+        </p>
       </form>
     </div>
 
